@@ -36,6 +36,10 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
 
+          # Giới hạn số vòng xử lý mỗi lần chạy để tiết kiệm hạn mức
+          claude_args: |
+            --max-turns 10
+
           # Optional: Customize the trigger phrase (default: @claude)
           # trigger_phrase: "/claude"
 
